@@ -39,7 +39,7 @@ namespace RPS.Tests
       //assert
       Assert.IsTrue(result == "rock" || result == "paper" || result == "scissors");
     }
-    [TestMethod]
+    [TestMethod] //4
     public void GameEvaluator_ReturnsAStringOfIfTheComOrHumanWins_String()
     {
 
