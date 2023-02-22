@@ -7,6 +7,10 @@ namespace RPS.Models
   {
     public string PlayerChoice;
     public string ComputerChoice;
+    public Generator()
+    {
+      int randomNumber = randomNumber.Next(1, 4);
+      return randomNumber;
+    }
   }
-
 }

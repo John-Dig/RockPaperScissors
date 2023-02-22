@@ -17,6 +17,17 @@ namespace RPS.Tests
       Assert.AreEqual(typeof(Game), newGame.GetType());
 
     }
+    [TestMethod] //2
+    public void Generator_GeneratesRPS_String()
+    {
+      //arrange
+      Game newGame = new Game();
+      //act
+      int choice = newGame.Generator();
+      //assert
+      Assert.IsTrue(choice >= 1 && choice <= 3);
+
+    }
 
   }
 
