@@ -32,17 +32,32 @@ namespace RPS.Tests
     [TestMethod] //3
     public void Evaluate_ReturnsAStringResult_String()
     {
-    //arrange
-    Game newGame = new Game();
-    //act
-    string result = newGame.Evaluate();
-    //assert
-    Assert.IsTrue(result == "rock" || result == "paper" || result == "scissors");
+      //arrange
+      Game newGame = new Game();
+      //act
+      string result = newGame.Evaluate();
+      //assert
+      Assert.IsTrue(result == "rock" || result == "paper" || result == "scissors");
     }
+    [TestMethod]
+    public void GameEvaluator_ReturnsAStringOfIfTheComOrHumanWins_String()
+    {
+
+      //arrange
+      Game newGame = new Game();
+      //act
+      string winner = "Human Wins";
+      //assert
+      Assert.isTrue(winner == "Human Wins" || winner == "Computer Wins" || winner == "Draw");
+    }
+
   }
 
 
-    //arrange
+
+
+
+  //arrange
   //act
   //assert
 

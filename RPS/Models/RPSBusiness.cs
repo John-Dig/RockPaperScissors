@@ -34,5 +34,41 @@ namespace RPS.Models
       }
       return result;
     }
+
+    public string GameEvaluator()
+    {
+      string computerInput = Evaluate();
+      string humanInput = "rock";
+      string winner = "";
+      if (computerInput == "scissors" && humanInput == "rock")
+      {
+        winner = "Human Wins";
+      }
+      if (computerInput == "rock" && humanInput == "paper")
+      {
+        winner = "Human Wins";
+      }
+      if (computerInput == "paper" && humanInput == "scissors")
+      {
+        winner = "Human Wins";
+      }
+      if (computerInput == humanInput)
+      {
+        winner = "Draw";
+      }
+      if (computerInput == "paper" && humanInput == "rock")
+      {
+        winner = "Computer Wins";
+      }
+      if (computerInput == "scissors" && humanInput == "paper")
+      {
+        winner = "Computer Wins";
+      }
+      if (computerInput == "rock" && humanInput == "scissors")
+      {
+        winner = "Computer Wins";
+      }
+      return winner;
+    }
   }
 }
