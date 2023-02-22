@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using RPS.Models;
 
 namespace RPS
@@ -7,8 +8,13 @@ namespace RPS
   {
     static void Main()
     {
+      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
       Console.WriteLine("Enter rock, paper, or scissors:");
-      string choice = Console.ReadLine();
+      Game newGame = new Game();
+      string PlayerChoice = Console.ReadLine();
+
+      Console.WriteLine(newGame.Evaluate());
+      Console.WriteLine(newGame.GameEvaluator());
     }
   }
 }

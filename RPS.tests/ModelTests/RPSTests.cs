@@ -2,6 +2,7 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RPS.Models;
 
+
 namespace RPS.Tests
 {
   [TestClass]
@@ -48,7 +49,7 @@ namespace RPS.Tests
       //act
       string winner = "Human Wins";
       //assert
-      Assert.isTrue(winner == "Human Wins" || winner == "Computer Wins" || winner == "Draw");
+      Assert.IsTrue(winner == "Human Wins" || winner == "Computer Wins" || winner == "Draw");
     }
 
   }

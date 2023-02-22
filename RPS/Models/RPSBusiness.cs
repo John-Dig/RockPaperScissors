@@ -37,36 +37,42 @@ namespace RPS.Models
 
     public string GameEvaluator()
     {
-      string computerInput = Evaluate();
-      string humanInput = "rock";
+      string ComputerChoice = Evaluate();
+      
       string winner = "";
-      if (computerInput == "scissors" && humanInput == "rock")
+      Console.WriteLine(ComputerChoice);
+      Console.WriteLine(PlayerChoice);
+      if (ComputerChoice == "scissors" && PlayerChoice == "rock")
       {
         winner = "Human Wins";
       }
-      if (computerInput == "rock" && humanInput == "paper")
+      if (ComputerChoice == "rock" && PlayerChoice == "paper")
       {
         winner = "Human Wins";
       }
-      if (computerInput == "paper" && humanInput == "scissors")
+      if (ComputerChoice == "paper" && PlayerChoice == "scissors")
       {
         winner = "Human Wins";
       }
-      if (computerInput == humanInput)
+      if (ComputerChoice == PlayerChoice)
       {
         winner = "Draw";
       }
-      if (computerInput == "paper" && humanInput == "rock")
+      if (ComputerChoice == "paper" && PlayerChoice == "rock")
       {
         winner = "Computer Wins";
       }
-      if (computerInput == "scissors" && humanInput == "paper")
+      if (ComputerChoice == "scissors" && PlayerChoice == "paper")
       {
         winner = "Computer Wins";
       }
-      if (computerInput == "rock" && humanInput == "scissors")
+      if (ComputerChoice == "rock" && PlayerChoice == "scissors")
       {
         winner = "Computer Wins";
+      }
+      else
+      {
+        winner = "Whaaaaaat!";
       }
       return winner;
     }
