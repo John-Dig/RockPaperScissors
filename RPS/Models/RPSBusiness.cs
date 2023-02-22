@@ -5,8 +5,8 @@ namespace RPS.Models
 {
   public class Game
   {
-    public string PlayerChoice;
-    public string ComputerChoice;
+    // public string computer { get; set; }
+    // public string human { get; set; }
 
     public int GenerateRandomNumber()
     {
@@ -35,38 +35,38 @@ namespace RPS.Models
       return result;
     }
 
-    public string GameEvaluator()
+    public string GameEvaluator(string computer, string human)
     {
       string ComputerChoice = Evaluate();
-      
+      Console.WriteLine(computer);
+      Console.WriteLine(human);
       string winner = "";
-      Console.WriteLine(ComputerChoice);
-      Console.WriteLine(PlayerChoice);
-      if (ComputerChoice == "scissors" && PlayerChoice == "rock")
+
+      if (computer.Equals("scissors") && human.Equals("rock"))
       {
         winner = "Human Wins";
       }
-      if (ComputerChoice == "rock" && PlayerChoice == "paper")
+       else if (computer.Equals("rock") && human.Equals("paper"))
       {
         winner = "Human Wins";
       }
-      if (ComputerChoice == "paper" && PlayerChoice == "scissors")
+      else if (computer.Equals("paper") && human.Equals("scissors"))
       {
         winner = "Human Wins";
       }
-      if (ComputerChoice == PlayerChoice)
+      else if (computer.Equals(human))
       {
         winner = "Draw";
       }
-      if (ComputerChoice == "paper" && PlayerChoice == "rock")
+      else if (computer.Equals("paper") && human.Equals("rock"))
       {
         winner = "Computer Wins";
       }
-      if (ComputerChoice == "scissors" && PlayerChoice == "paper")
+      else if (computer.Equals("scissors") && human.Equals("paper"))
       {
         winner = "Computer Wins";
       }
-      if (ComputerChoice == "rock" && PlayerChoice == "scissors")
+      else if (computer.Equals("rock") && human.Equals("scissors"))
       {
         winner = "Computer Wins";
       }

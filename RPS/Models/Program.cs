@@ -11,10 +11,12 @@ namespace RPS
       Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
       Console.WriteLine("Enter rock, paper, or scissors:");
       Game newGame = new Game();
-      string PlayerChoice = Console.ReadLine();
-
-      Console.WriteLine(newGame.Evaluate());
-      Console.WriteLine(newGame.GameEvaluator());
+      string human = Console.ReadLine();
+      string computer = newGame.Evaluate();
+      Console.WriteLine("Computer Choice:" + computer);
+      Console.WriteLine("Human Choice: " + human);
+      string result = newGame.GameEvaluator(computer, human);
+      Console.WriteLine(result);
     }
   }
 }
