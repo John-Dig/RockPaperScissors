@@ -7,7 +7,8 @@ namespace RPS
   {
     static void Main()
     {
-
+      Console.WriteLine("Enter rock, paper, or scissors:");
+      string choice = Console.ReadLine();
     }
   }
 }
