@@ -1,11 +1,28 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TEMPLATE.Models;
+using RPS.Models;
 
-namespace TEMPLATE.Tests
+namespace RPS.Tests
 {
   [TestClass]
-  public class TEMPLATE
+  public class RPS
   {
-    // Tests will go here!
+    [TestMethod] //1
+    public void GameConstructor_CreatesInstanceOfGame_Game()
+    {
+      //arrange
+      Game newGame = new Game();
+      //act
+      //assert
+      Assert.AreEqual(typeof(Game), newGame.GetType());
+
+    }
+
   }
+
+  //arrange
+  //act
+  //assert
+
+
 }
