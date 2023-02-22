@@ -23,17 +23,30 @@ namespace RPS.Tests
       //arrange
       Game newGame = new Game();
       //act
-      int choice = newGame.Generator();
+      int choice = newGame.GenerateRandomNumber();
       //assert
       Assert.IsTrue(choice >= 1 && choice <= 3);
 
     }
 
+    [TestMethod] //3
+
+    //arrange
+    Game newGame = new Game();
+    //act
+    string computerResult;
+
+    newGame.Evaluate(computerResult)
+    //assert
+    Assert.isTrue(result, "rock" || "paper" || "scissors");
+
   }
 
-  //arrange
+
+    //arrange
   //act
   //assert
+
 
 
 }
