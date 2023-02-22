@@ -30,13 +30,15 @@ namespace RPS.Tests
     }
 
     [TestMethod] //3
-
+    public void Evaluate_ReturnsAStringResult_String()
+    {
     //arrange
     Game newGame = new Game();
     //act
     string result = newGame.Evaluate();
     //assert
-    Assert.Contains(result, { "rock" "paper", "scissors" });
+    Assert.IsTrue(result == "rock" || result == "paper" || result == "scissors");
+    }
   }
 
 

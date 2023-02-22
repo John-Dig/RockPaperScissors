@@ -23,17 +23,14 @@ namespace RPS.Models
       if (num == 1)
       {
         result = "rock";
-        return result;
       }
       if (num == 2)
       {
         result = "paper";
-        return result;
       }
       if (num == 3)
       {
         result = "scissors";
-        return result;
       }
       return result;
     }
