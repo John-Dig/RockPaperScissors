@@ -34,12 +34,9 @@ namespace RPS.Tests
     //arrange
     Game newGame = new Game();
     //act
-    string computerResult;
-
-    newGame.Evaluate(computerResult)
+    string result = newGame.Evaluate();
     //assert
-    Assert.isTrue(result, "rock" || "paper" || "scissors");
-
+    Assert.Contains(result, { "rock" "paper", "scissors" });
   }
 
 
